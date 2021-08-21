@@ -51,7 +51,7 @@
                 display: flex;
             }
 
-            ul.menu > li > a {
+            ul.menu > li > a:first-child {
                 display: block;
                 text-decoration: none;
                 background-color: blue;
@@ -71,12 +71,24 @@
                 padding: 10px;
                 color: white;
             }
+
+            ul.menu > li {
+                position: relative;
+            }
+            ul.menu > li > a:last-child {
+                position: absolute;
+                top: 5px;
+                right: 15px;
+                color: white;
+                text-decoration: none;
+            }
+
         </style>
         <script>
             $(document).ready(function() {
                 $(".tab-content h1:not(:first-child)").hide()
                 // $("ul.menu a").click
-                $("ul.menu").on("click", "li > a", function() {
+                $("ul.menu").on("click", "li > a:first-child", function() {
                     event.preventDefault()
 
                     // xu ly tab
@@ -112,6 +124,17 @@
                         `<h1 id="tab${count + 1}" style="display:none">${content}</h1>`
                     )
                 })
+
+                $("ul.menu").on("click", "li > a:last-child", function() {
+                    var h = $(this).siblings().attr("href")
+                    $(h).remove()
+                    var active = $(this).siblings().attr("class")
+                    $(this).parent().remove()
+                    
+                    if (active != null && active.indexOf("active") >= 0) {
+                        $("ul.menu > li:first-child > a:first-child").click()
+                    }
+                })
             })
         </script>
     </head>
@@ -125,10 +148,22 @@
                 <br><br>
             </div>
             <ul class="menu">
-                <li><a href="#tab1" class="active">Java</a></li>
-                <li><a href="#tab2">Python</a></li>
-                <li><a href="#tab3">C++</a></li>
-                <li><a href="#tab4">C#</a></li>
+                <li>
+                    <a href="#tab1" class="active">Java</a>
+                    <a href="javascript:;">&times;</a>
+                </li>
+                <li>
+                    <a href="#tab2">Python</a>
+                    <a href="javascript:;">&times;</a>
+                </li>
+                <li>
+                    <a href="#tab3">C++</a>
+                    <a href="javascript:;">&times;</a>
+                </li>
+                <li>
+                    <a href="#tab4">C#</a>
+                    <a href="javascript:;">&times;</a>
+                </li>
             </ul>
             <div class="tab-content active">
                 <h1 id="tab1">WELCOME TO JAVA!!!</h1>
