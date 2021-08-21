@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div.items {
+                display: flex;
+            }
+            div.item {
+                width: 50%;
+            }
+
+            div.thumb {
+                display: flex;
+            }
+
+            div.thumb > div {
+                width: 20%;
+            }
+
+            div.thumb img, #mainImg {
+                width: 100%;
+            }
+
+            .area {
+                background-color: gray;
+                width: 600px;
+                height: 400px;
+                position: relative;
+            }
+
+            #ball {
+                width: 100px;
+                position: absolute;
+            }
+        </style>
+        <script>
+            function changeImage(obj) {
+                var mainImg = document.getElementById("mainImg")
+                // mainImg.src = obj.src
+                mainImg.setAttribute("src", obj.src)
+            }
+
+            function init() {
+                var images = document.querySelectorAll("div.thumb img")
+                for (var i = 0; i < images.length; i++)
+                    images[i].onclick = function() {
+                        var mainImg = document.getElementById("mainImg")
+                        mainImg.setAttribute("src", this.src)
+                    }
+
+                var buttons = document.querySelectorAll("div.btn img")
+                for (var i = 0; i < buttons.length; i++)
+                    buttons[i].onclick = function() {
+                        var mainImg = document.getElementById("mainImg")
+                        // mainImg.src = "images/galaxys8/" + this.alt + "_1.jpg"
+                        mainImg.src = `images/galaxys8/${this.alt}_1.jpg`
+
+                        var subImages = document.querySelectorAll("div.thumb img")
+                        for (var i = 0; i < subImages.length; i++)
+                            subImages[i].src = `images/galaxys8/${this.alt}_${i + 1}.jpg`
+                    }
+
+                var clock = document.getElementById("clock")
+                setInterval(function() {
+                    var d = new Date()  
+                    clock.innerText = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+                }, 1000)
+            }
+
+            function changeSubject(obj) {
+                var h1 = document.getElementById("subject")
+                h1.innerHTML = obj.value
+            }
+
+            var timer = null
+            function play() {
+                var ball = document.getElementById("ball")
+                var area = document.getElementsByClassName("area")[0]
+                var l = 0, t = 0, incx=5, incy=5;
+                timer = setInterval(function() {
+                    if (t < 0 || t + ball.offsetHeight >= area.offsetHeight)
+                        incy = -incy
+                    if (l < 0 || l + ball.offsetWidth >= area.offsetWidth)
+                        incx = -incx
+
+                    l += incx
+                    t += incy
+
+                    ball.style.left = l + "px"
+                    ball.style.top = t + "px"
+                }, 10)
+            }
+
+            function stop() {
+                if (timer != null)
+                    clearInterval(timer)
+            }
+        </script>
+    </head>
+    <body onload="init()">
+        <div id="test">
+            <h1 id="clock">00:00:00</h1>
+        </div>
+        <div>
+            <div>
+                <input type="button" value="Play" onclick="play()" />
+                <input type="button" value="Stop" onclick="stop()" />
+            </div>
+            <div class="area">
+                <img src="images/ball.png" id="ball" alt="ball" />
+            </div>
+        </div>
+        <div class="items">
+            <div class="item">
+                <img src="images/galaxys8/Gold_1.jpg" id="mainImg" alt="1" />
+                <div class="thumb">
+                    <div><img src="images/galaxys8/Gold_1.jpg" alt="1" /></div>
+                    <div><img src="images/galaxys8/Gold_2.jpg" alt="1" /></div>
+                    <div><img src="images/galaxys8/Gold_3.jpg" alt="1" /></div>
+                    <div><img src="images/galaxys8/Gold_4.jpg" alt="1" /></div>
+                    <div><img src="images/galaxys8/Gold_5.jpg" alt="1" /></div>
+                </div>
+            </div>
+            <div class="item">
+                <h1 id="subject">DIEN THOAI GALAXY S8+</h1>
+                <div>
+                    <input type="text" onchange="changeSubject(this)" placeholder="Enter name..." />
+                    <br><br>
+                </div>
+                <div class="btn">
+                    <img src="images/buttons/Arctic-Silver.jpg" alt="Silver" />
+                    <img src="images/buttons/Coral-Blue.jpg" alt="Blue" />
+                    <img src="images/buttons/Maple-Gold-.jpg" alt="Gold" />
+                    <img src="images/buttons/Midnight-Black.jpg" alt="Black" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

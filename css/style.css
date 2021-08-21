@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+div.items {
+    display: flex;
+    flex-wrap: wrap;
+}
+div.item {
+   width: 32%;
+   background-color: lightcoral;
+   border: 2px solid lightgreen;
+   margin: 0.5%;
+   padding: 10px;
+   border-radius: 20px;
+   position: relative;
+   z-index: -1;
+}
+
+@keyframes doimau {
+   20% {
+       background-color: gold;
+   }
+   50% {
+       background-color: red;
+   }
+   75% {
+       background-color: darkcyan;
+   }
+}
+
+div.label {
+   position: absolute;
+   top: 0;
+   right: 0;
+   background-color: gold;
+   color: blue;
+   padding: 10px 20px;
+   border-radius: 0 20px;
+   animation: doimau 1s infinite;
+}
+
+div.item > h1 {
+    font-size: 3vw;
+}
+
+div.item > div {
+   overflow: hidden;
+}
+
+div.item img {
+   width: 100%;
+   transition: transform ease-in 2s;
+}
+
+div.item img:hover {
+   transform: scale(1.2);
+}
+
+ul.menu {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+   background-color: lightgrey;
+   
+} 
+
+nav > ul.menu {
+ display: flex;
+}
+
+ul.menu > li {
+   /* padding: 20px; */
+   max-width: 250px;
+   border-right: 1px solid white;
+}
+
+ul.menu > li > a {
+   display: block;
+   padding: 20px;
+   text-decoration: none;
+   color: blue;
+}
+
+ul.menu > li > a:hover {
+   background-color: darkblue;
+   color: white;
+}
+
+ul.menu > li:last-child {
+   margin-left: auto;
+}
+
+.subcontent {
+   display: none;
+   position: absolute;
+   z-index: 999;
+}
+.sub:hover .subcontent {
+   display: block;
+   
+}
+div.lang {
+   overflow: auto;
+}
+div.lang > img {
+   float: left;
+}
+
+@media screen and (max-width: 1500px) {
+    body {
+        background-color: lightgoldenrodyellow;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        background-color: lightcoral;
+    }
+
+    div.item {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+
+    div.item {
+        width: 99%;
+    }
+
+    nav > ul.menu {
+        flex-direction: column;
+    }
+
+    ul.menu > li {
+        max-width: 100%;
+    }
+
+    nav > ul.menu > li {
+        border-right: none;
+    }
+
+    nav > ul.menu > li:last-child {
+        margin-left: 0;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color:lightgreen;
+    }
+}
