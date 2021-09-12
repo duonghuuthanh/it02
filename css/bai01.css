@@ -1,0 +1,173 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul.menu {
+    display: flex;
+    background-color: #CC3300;
+}
+
+nav > ul.menu > li {
+    width: 16.66%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul.menu > li  > a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border-right: 1px solid white;;
+}
+
+nav ul.menu > li  > a:hover {
+    background-color: #CC9900;
+}
+
+nav ul.menu > li:last-child  > a {
+    border-right: none;
+}
+
+nav ul.menu > li span {
+    display: block;
+}
+
+.col10 {
+    width: 10%;
+}
+
+.col70 {
+    width: 70%;
+}
+
+.col20 {
+    width: 20%;
+}
+
+div.my-header {
+    background: linear-gradient(orange, #CC3300);
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+div.my-header h1 {
+    color: white;
+    font-size: 40px;
+    text-shadow: 3px 4px 3px darkblue;
+}
+
+input {
+    padding: 10px;
+}
+
+input[type=text] {
+    width: 200px;
+}
+
+input[type=button] {
+    color:white;
+    background-color: #CC3300;
+    border: 1px solid orange;
+}
+
+ul.menu.subcontent > li  > a {
+    border-right: none !important;
+}
+
+.subcontent {
+    display: none;
+}
+
+.sub:hover .subcontent {
+    display: block;
+    position: absolute;
+    background-color: rgb(206, 136, 7);
+    width: 100%;
+    z-index: 99;
+}
+
+.subcontent::after {
+    content: " ";
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent rgb(206, 136, 7) transparent;
+    position: absolute;
+    bottom: 100%;
+    left: 45%;
+}
+
+section.course {
+    width: 80%;
+    margin: 5px auto;
+}
+
+div.items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.item {
+    width: 25%;
+    padding: 10px;
+    position: relative;
+}
+
+div.item h1 {
+    background: linear-gradient(lightblue, darkblue);
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+div.item div.img {
+    background: linear-gradient(rgb(206, 136, 7), #CC3300);
+    text-align: center;
+    padding: 10px;
+}
+
+div.img img {
+    width: 80%;
+}
+
+
+div.detail {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    padding: 25% 5%;
+    opacity: 0;
+    transition: opacity 1s;
+    /* overflow: hidden; */
+    /* display: none; */
+}
+
+div.item:hover div.detail {
+    opacity: 1;
+    /* display: block; */
+    /* opacity: 1; */
+}
+
+ul.ads {
+    position: fixed;
+}
+
+ul.ads img {
+    transition: transform .5s;
+}
+
+ul.ads img:hover {
+    transform: scale(1.1);
+}
