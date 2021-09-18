@@ -171,3 +171,41 @@ ul.ads img {
 ul.ads img:hover {
     transform: scale(1.1);
 }
+
+h1.title {
+    border-bottom: 3px solid orange;
+}
+
+h1.title > span {
+    display: block;
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    width: 30%;
+    font-size: 30px;
+    border-radius: 15px 15px 0 0;
+}
+
+.col10 {
+    width: 10%;
+}
+
+.col90 {
+    width: 90%;
+}
+
+div.post {
+    display: flex;
+}
+
+div.posts img {
+    width: 100%;
+}
+
+footer {
+    background: linear-gradient(orange, rgb(151, 90, 14));
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    color: white;
+}

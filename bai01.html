@@ -3,6 +3,9 @@
     <head>
         <title>Bai 01</title>
         <link href="css/bai01.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
         <nav>
@@ -14,13 +17,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#forum">
                         <img src="images/lab01/forum.png" alt="home" />
                         <span>Dien dan</span>
                     </a>
                 </li>
                 <li class="sub">
-                    <a href="#">
+                    <a href="#course">
                         <img src="images/lab01/programming.png" alt="home" />
                         <span>Hoc lap trinh</span>
                     </a>
@@ -34,7 +37,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#news">
                         <img src="images/lab01/news.png" alt="home" />
                         <span>Tin tuc cong nghe</span>
                     </a>
@@ -69,8 +72,8 @@
                     <h1>TIN HOC VA DOI SONG</h1>
                 </div>
                 <div class="col20">
-                    <input type="text" placeholder="Nhap tu khoa..." />
-                    <input type="button" value="Tim kiem" />
+                    <input type="text" id="txtSearch" placeholder="Nhap tu khoa..." />
+                    <input type="button" value="Tim kiem" id="btnSearch" />
                 </div>
             </div>
         </header>
@@ -92,7 +95,7 @@
             </ul>
         </section>
 
-        <section class="course">
+        <section class="course" id="course">
             <div class="items">
                 <div class="item">
                     <div>
@@ -113,7 +116,7 @@
                 </div>
                 <div class="item">
                     <div>
-                        <h1>LAP TRINH C++</h1>
+                        <h1>LAP TRINH JAVA</h1>
                         <div class="img">
                             <img src="images/lab01/cpp.png" alt="C++" />
                         </div>
@@ -121,7 +124,7 @@
                 </div>
                 <div class="item">
                     <div>
-                        <h1>LAP TRINH C++</h1>
+                        <h1>CONG NGHE PHAN MEM</h1>
                         <div class="img">
                             <img src="images/lab01/cpp.png" alt="C++" />
                         </div>
@@ -129,7 +132,7 @@
                 </div>
                 <div class="item">
                     <div>
-                        <h1>LAP TRINH C++</h1>
+                        <h1>KIEM THU PHAN MEM</h1>
                         <div class="img">
                             <img src="images/lab01/cpp.png" alt="C++" />
                         </div>
@@ -137,7 +140,7 @@
                 </div>
                 <div class="item">
                     <div>
-                        <h1>LAP TRINH C++</h1>
+                        <h1>THIET KE WEB</h1>
                         <div class="img">
                             <img src="images/lab01/cpp.png" alt="C++" />
                         </div>
@@ -145,7 +148,7 @@
                 </div>
                 <div class="item">
                     <div>
-                        <h1>LAP TRINH C++</h1>
+                        <h1>MANG MAY TINH</h1>
                         <div class="img">
                             <img src="images/lab01/cpp.png" alt="C++" />
                         </div>
@@ -210,8 +213,156 @@
             </div>
         </section>
 
-        <footer>
+        <section class="course" id="news">
+            <h1 class="title"><span>TIN TUC CONG NGHE</span></h1>
 
+            <div class="posts">
+                <div class="post">
+                    <div class="col10">
+                        <img src="images/category/category1.jpg" alt="test" />
+                    </div>
+                    <div class="col90">
+                        <h3>Galaxy Watch4 mở bán, giá từ 6,5 triệu đồng</h3>
+                        <p>Galaxy Watch 4 có hai phiên bản với cấu hình tương đương nhau nhưng khác biệt ở thiết kế.
+
+                            Thay vì bán ra hai dòng sản phẩm khác nhau như trước, Samsung chỉ giới thiệu một dòng Galaxy Watch4 với hai phiên bản tiêu chuẩn và Classic, thay thế cho Watch 2 Active và Watch3.</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="col10">
+                        <img src="images/category/category1.jpg" alt="test" />
+                    </div>
+                    <div class="col90">
+                        <h3>Galaxy Watch4 mở bán, giá từ 6,5 triệu đồng</h3>
+                        <p>Galaxy Watch 4 có hai phiên bản với cấu hình tương đương nhau nhưng khác biệt ở thiết kế.
+
+                            Thay vì bán ra hai dòng sản phẩm khác nhau như trước, Samsung chỉ giới thiệu một dòng Galaxy Watch4 với hai phiên bản tiêu chuẩn và Classic, thay thế cho Watch 2 Active và Watch3.</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="col10">
+                        <img src="images/category/category1.jpg" alt="test" />
+                    </div>
+                    <div class="col90">
+                        <h3>Galaxy Watch4 mở bán, giá từ 6,5 triệu đồng</h3>
+                        <p>Galaxy Watch 4 có hai phiên bản với cấu hình tương đương nhau nhưng khác biệt ở thiết kế.
+
+                            Thay vì bán ra hai dòng sản phẩm khác nhau như trước, Samsung chỉ giới thiệu một dòng Galaxy Watch4 với hai phiên bản tiêu chuẩn và Classic, thay thế cho Watch 2 Active và Watch3.</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="col10">
+                        <img src="images/category/category1.jpg" alt="test" />
+                    </div>
+                    <div class="col90">
+                        <h3>Galaxy Watch4 mở bán, giá từ 6,5 triệu đồng</h3>
+                        <p>Galaxy Watch 4 có hai phiên bản với cấu hình tương đương nhau nhưng khác biệt ở thiết kế.
+
+                            Thay vì bán ra hai dòng sản phẩm khác nhau như trước, Samsung chỉ giới thiệu một dòng Galaxy Watch4 với hai phiên bản tiêu chuẩn và Classic, thay thế cho Watch 2 Active và Watch3.</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="col10">
+                        <img src="images/category/category1.jpg" alt="test" />
+                    </div>
+                    <div class="col90">
+                        <h3>Galaxy Watch4 mở bán, giá từ 6,5 triệu đồng</h3>
+                        <p>Galaxy Watch 4 có hai phiên bản với cấu hình tương đương nhau nhưng khác biệt ở thiết kế.
+
+                            Thay vì bán ra hai dòng sản phẩm khác nhau như trước, Samsung chỉ giới thiệu một dòng Galaxy Watch4 với hai phiên bản tiêu chuẩn và Classic, thay thế cho Watch 2 Active và Watch3.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course" id="forum">
+            <h1 class="title"><span>DIEN DAN CONG NGHE</span></h1>
+
+            <div class="posts">
+                <div class="post">
+                    <div class="col10">
+                        <img src="images/category/category1.jpg" alt="test" />
+                    </div>
+                    <div class="col90">
+                        <h3>Galaxy Watch4 mở bán, giá từ 6,5 triệu đồng</h3>
+                        <p>Galaxy Watch 4 có hai phiên bản với cấu hình tương đương nhau nhưng khác biệt ở thiết kế.
+
+                            Thay vì bán ra hai dòng sản phẩm khác nhau như trước, Samsung chỉ giới thiệu một dòng Galaxy Watch4 với hai phiên bản tiêu chuẩn và Classic, thay thế cho Watch 2 Active và Watch3.</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="col10">
+                        <img src="images/category/category1.jpg" alt="test" />
+                    </div>
+                    <div class="col90">
+                        <h3>Galaxy Watch4 mở bán, giá từ 6,5 triệu đồng</h3>
+                        <p>Galaxy Watch 4 có hai phiên bản với cấu hình tương đương nhau nhưng khác biệt ở thiết kế.
+
+                            Thay vì bán ra hai dòng sản phẩm khác nhau như trước, Samsung chỉ giới thiệu một dòng Galaxy Watch4 với hai phiên bản tiêu chuẩn và Classic, thay thế cho Watch 2 Active và Watch3.</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="col10">
+                        <img src="images/category/category1.jpg" alt="test" />
+                    </div>
+                    <div class="col90">
+                        <h3>Galaxy Watch4 mở bán, giá từ 6,5 triệu đồng</h3>
+                        <p>Galaxy Watch 4 có hai phiên bản với cấu hình tương đương nhau nhưng khác biệt ở thiết kế.
+
+                            Thay vì bán ra hai dòng sản phẩm khác nhau như trước, Samsung chỉ giới thiệu một dòng Galaxy Watch4 với hai phiên bản tiêu chuẩn và Classic, thay thế cho Watch 2 Active và Watch3.</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="col10">
+                        <img src="images/category/category1.jpg" alt="test" />
+                    </div>
+                    <div class="col90">
+                        <h3>Galaxy Watch4 mở bán, giá từ 6,5 triệu đồng</h3>
+                        <p>Galaxy Watch 4 có hai phiên bản với cấu hình tương đương nhau nhưng khác biệt ở thiết kế.
+
+                            Thay vì bán ra hai dòng sản phẩm khác nhau như trước, Samsung chỉ giới thiệu một dòng Galaxy Watch4 với hai phiên bản tiêu chuẩn và Classic, thay thế cho Watch 2 Active và Watch3.</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="col10">
+                        <img src="images/category/category1.jpg" alt="test" />
+                    </div>
+                    <div class="col90">
+                        <h3>Galaxy Watch4 mở bán, giá từ 6,5 triệu đồng</h3>
+                        <p>Galaxy Watch 4 có hai phiên bản với cấu hình tương đương nhau nhưng khác biệt ở thiết kế.
+
+                            Thay vì bán ra hai dòng sản phẩm khác nhau như trước, Samsung chỉ giới thiệu một dòng Galaxy Watch4 với hai phiên bản tiêu chuẩn và Classic, thay thế cho Watch 2 Active và Watch3.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div>
+                <h3>Khoa CNTT, DAI HOC MO TPHCM</h3>
+                <ul>
+                    <li>Ho ten: Nguyen Van A</li>
+                    <li>Ho ten: Nguyen Van A</li>
+                    <li>Ho ten: Nguyen Van A</li>
+                    <li>Ho ten: Nguyen Van A</li>
+                </ul>
+            </div>
+            <div>
+                <p><em>Vui long theo doi chung toi:</em></p>
+                <div>
+                    <input type="text" placeholder="Nhap email..." />
+                    <input type="button" value="Theo doi" />
+                </div>
+            </div>
+            <div>
+                <h3>Khoa CNTT, DAI HOC MO TPHCM</h3>
+                <ul>
+                    <li>Ho ten: Nguyen Van A</li>
+                    <li>Ho ten: Nguyen Van A</li>
+                    <li>Ho ten: Nguyen Van A</li>
+                    <li>Ho ten: Nguyen Van A</li>
+                </ul>
+            </div>
         </footer>
     </body>
 </html>
