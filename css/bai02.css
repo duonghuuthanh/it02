@@ -1,0 +1,160 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background: linear-gradient(rgb(80, 80, 214), white, blue) fixed;
+}
+
+@font-face {
+    font-family: myFont1;
+    src: url(../fonts/VNI-Ong\ do.ttf);
+}
+
+@font-face {
+    font-family: myFont2;
+    src: url(../fonts/VNI-Slogan.ttf);
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: lightblue;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+a.profile {
+    position: absolute;
+    top: 5px;
+    right: 5px; 
+}
+
+div.nav {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.menu {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul.menu > li {
+    margin-right: 2px;
+}
+
+ul.menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    background: linear-gradient(darkblue, lightblue);
+    border-radius: 15px 15px 0 0;
+    font-family: myFont2;
+    font-size: 1.5em;
+}
+
+h1.shadow {
+    text-shadow: 2px 3px 3px red;
+    color: darkred;
+    font-family: myFont1;
+    font-size: 3em; 
+}
+
+div.ctrl {
+    background-color: blue;
+    text-align: center;
+    padding: 10px;
+}
+
+input {
+    padding: 10px;
+}
+
+input[type=text], input[type=date] {
+    width: 30%;
+    color: darkblue;
+}
+
+input[type=button] {
+    background-color: darkblue;
+    width: 100px;
+    border: 1px solid white;
+}
+
+.col5 {
+    width: 5%;
+}
+
+.col70 {
+    width: 70%;
+}
+
+.col15 {
+    width: 15%;
+}
+
+.col10 {
+    width: 10%;
+}
+
+div.item {
+    background-color: darkblue;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.active {
+    background-color: darkred !important;
+}
+
+aside.ads > div {
+    width: 13%;
+    background: linear-gradient(blue, darkblue);
+    text-align: center;
+    position: fixed;
+    padding: 8rem 0;
+    border: 2px solid gold;
+}
+
+aside.ads > div:first-child {
+    left: 1%;
+}
+
+aside.ads > div:last-child {
+    right: 1%;
+}
+
+footer {
+    background-color: lightblue;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+footer > span {
+    position: relative;
+    animation: dichuyen 20s infinite;
+}
+
+@keyframes dichuyen {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
