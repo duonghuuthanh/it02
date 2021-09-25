@@ -1,0 +1,131 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white !important;
+}
+
+.my-color {
+    color: darkblue !important;
+}
+
+nav {
+    background-color: rgb(70, 70, 179);
+    padding: 5px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul.menu > li > a{
+    display: block;
+    padding: 15px 20px;
+}
+
+ul.menu > li > a:hover {
+    color: gold;
+}
+
+ul.menu > li:first-child > a {
+    padding: 15px 0;
+}
+
+.btn {
+    padding: 15px 10px;
+    display: block;
+}
+
+.group-btn > .btn:first-child {
+    background-color: coral;
+    border-radius: 5px 0 0 5px;
+}
+
+.group-btn > .btn:last-child {
+    background-color: darkcyan;
+    border-radius: 0 5px 5px 0;
+}
+
+h1.subject {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+h1.subject::after {
+    content: "--o0o--";
+    display: block;
+    font-size: 1.5rem;
+}
+
+div.course-bg {
+    background-image: url(../images/lab03/section_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    padding: 1%;
+}
+
+div.courses {
+    background-color: rgb(4, 4, 124, 0.6) !important;
+    text-align: center;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+div.news > div {
+    width: 50%;
+}
+
+div.news img {
+    width: 100%;
+}
+
+.stats * {
+    color: darkblue !important;
+    text-align: center;
+}
+
+.stats i {
+    font-size: 4rem;
+}
+
+.fa-calendar {
+    color: rgb(131, 76, 10) !important;
+}
+
+.fa-user {
+    color: darkgreen !important;
+}
+
+.fa-book {
+    color: brown !important;
+}
+
+h2.num {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+footer {
+    background-color: darkblue;
+    padding: 3% 10px;
+}
+
